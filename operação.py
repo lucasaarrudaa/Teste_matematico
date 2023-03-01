@@ -6,17 +6,19 @@ print("\nA Sequência de Fibonacci se inicia por 0 e 1 e o próximo valor sempre
 print("Deseja descobrir se algum número pertence à sequencia?\n"
       "Se sim, digite [S]\n"
       "Se deseja sair, digite [X]")
-
 escolha_usuario = str(input().strip().upper())
+
 while escolha_usuario == "S":
 
     #executando
     while True:
         fibo_list = []
         nro_escolhido = 0
+
         while True:
             try:
                 nro_escolhido = int(input("Número que deseja verificar: \n"))
+
                 if not 0 <= nro_escolhido <= 500000:
                     raise ValueError("Por favor, pode digitar um número menor que 500000?")
             except ValueError as e:
